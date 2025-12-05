@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      .top-content {
+        height: 60vh;
+      }
+      .bottom-content {
+        background-color: #363032;
+        height: 40vh;
+        position: relative;
+      }
+
+      .box {
+        width: 868px;
+        height: 168px;
+        background-color: #ecdac4;
+        border-radius: 80px;
+
+        position: absolute;
+        top: calc(-168px / 2);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-content">
+      <img src="./imgs/image-02.png" alt="" />
+      <img src="./imgs/image-01.png" alt="" />
+    </div>
+    <div class="bottom-content">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
