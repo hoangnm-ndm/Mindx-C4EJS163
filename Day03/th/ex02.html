@@ -11,9 +11,31 @@
         padding: 0;
         margin: 0;
       }
+
+      body {
+        width: 100vw;
+        height: 100vh;
+      }
+
       .top-content {
         height: 60vh;
+        position: relative;
       }
+
+      .top-content > * {
+        position: absolute;
+      }
+
+      .top-content > img:nth-child(1) {
+        top: 18px;
+        right: 52px;
+      }
+
+      .top-content > img:nth-child(2) {
+        top: 280px;
+        right: 88px;
+      }
+
       .bottom-content {
         background-color: #363032;
         height: 40vh;
@@ -25,21 +47,84 @@
         height: 168px;
         background-color: #ecdac4;
         border-radius: 80px;
+        max-width: 100%;
 
         position: absolute;
         top: calc(-168px / 2);
         left: 50%;
         transform: translateX(-50%);
       }
+
+      .modal {
+        width: 465px;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 12px 12px 10px rgba(0, 0, 0, 0.4);
+        background-color: #fff;
+
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        z-index: 999;
+        border: 1px solid #ccc;
+
+        transform: translate(-50%, -50%);
+        .logo {
+          border-radius: 12px;
+          background-color: #ccc;
+          width: 100%;
+          height: 158px;
+          margin-bottom: 24px;
+        }
+        h4 {
+          font-family: "Inter", sans-serif;
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 8px;
+          color: #54595e;
+          text-align: center;
+        }
+        p {
+          font-size: 14px;
+          margin-bottom: 24px;
+          text-align: center;
+        }
+        input,
+        button {
+          width: 100%;
+          border-radius: 12px;
+          padding: 14px 16px;
+        }
+
+        input {
+          border: 1px solid #ccc;
+          margin-bottom: 24px;
+        }
+
+        button {
+          background-color: #4f4f4f;
+          color: #fff;
+          text-align: center;
+          border: none;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="top-content">
-      <img src="./imgs/image-02.png" alt="" />
-      <img src="./imgs/image-01.png" alt="" />
+      <img src="./imgs/image-02.png" alt="" width="440px" height="440px" />
+      <img src="./imgs/image-01.png" alt="" width="312px" height="312px" />
     </div>
     <div class="bottom-content">
       <div class="box"></div>
+    </div>
+
+    <div class="modal">
+      <div class="logo"></div>
+      <h4>Send feedback!</h4>
+      <p>Leave your feedback here.</p>
+      <input type="text" placeholder="Type text..." />
+      <button>Yeah, thanks!</button>
     </div>
   </body>
 </html>
