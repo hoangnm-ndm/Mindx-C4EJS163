@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: relative;
+        /* static: phần tử đi theo dòng chảy tự nhiên của tài liệu */
+        /* relative: phần tử ban đầu thì giữ nguyên vị trí, nhưng có thể sử dụng các thuộc tính top, bottom, right, left để điều chỉnh vị trí tương đối của phần tử với chính vị trí cũ của phần tử. Nhưng nó vẫn chiếm chỗ cũ của chính nó.
+        */
+
+        top: 30px;
+        left: 0px;
+        /* dương: left->right */
+        /* âm: right->left */
+        /* right: 50%; */
+
+        /* Nếu như cùng đặt left-right, top-bottom? */
+        background-color: green;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, placeat?
+    </p>
+    <div class="box"></div>
+    <img src="https://picsum.photos/200/300" alt="" />
+  </body>
+</html>

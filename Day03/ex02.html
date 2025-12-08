@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        background-color: greenyellow;
+        padding: 12px 30px 15px 26px;
+        /* top right bottom left */
+        /* padding-left: 100px; */
+        border-top: 10px dashed blue;
+        border-right: 20px solid orange;
+        border-left: 30px dotted red;
+        border-bottom: 10px dashed transparent;
+        /* border-style: ; */
+        /* border-width: ; */
+        /* border-color: ; */
+        /* border-collapse: ; */
+        /* thường dùng với table */
+        margin: 32px;
+        /* margin-collapse */
+
+        /* outline */
+      }
+      /* content-box */
+      /* width = 200px + 26px + 30px + 30px + 20px >= 200px */
+
+      /* border-box */
+      /* width = content + padding + border */
+      /* height = content + padding + border */
+      /* width = 200px */
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima,
+      voluptate.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima,
+      voluptate.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima,
+      voluptate.
+    </div>
+    <div class="box">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima,
+      voluptate.
+    </div>
+  </body>
+</html>

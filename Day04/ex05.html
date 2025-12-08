@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model & position</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      .box {
+        padding: 12px;
+        border: 10px solid black;
+        margin: 15px;
+      }
+
+      div.box1 {
+        background-color: yellow;
+      }
+
+      div.box2 {
+        background-color: red;
+      }
+
+      div.box3 {
+        background-color: blue;
+      }
+
+      div.box4 {
+        background-color: green;
+      }
+
+      div.parent {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        background-color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div class="box box1">MINDX 1</div>
+      <div class="box box2">MINDX 2</div>
+      <div class="box box3">MINDX 3</div>
+      <div class="box box4">MINDX 4</div>
+    </div>
+  </body>
+</html>
