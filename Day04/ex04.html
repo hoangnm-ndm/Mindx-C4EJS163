@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100%;
+        height: 300px;
+        background-color: #eee;
+        display: flex;
+        flex-direction: row;
+        /* row: ngang */
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        /* align-content: stretch; */
+        /* gap: 20px 40px; */
+        /* row-gap: 50px;
+        column-gap: 100px; */
+      }
+
+      .item {
+        /* width: 60px; */
+        height: 70px;
+        background-color: orange;
+        border: 2px solid red;
+        /* flex-grow: 1; */
+        /* đại diện cho khả năng mở rộng của phần tử */
+        /* flex-shrink: 1; */
+        /* đại diện cho khả năng bị thu hẹp của phần tử */
+        /* flex-basis: 80px; */
+        /* giá trị ban đầu trước khi bị mở rộng, hoặc co hẹp */
+      }
+
+      .item:nth-child(1) {
+        /* flex: flex-grow flex-shirk flex-basis */
+
+        /* flex: 2 0 200px; */
+        /* order: 1; */
+      }
+
+      .item:nth-child(2) {
+        /* flex: 1 1 200px; */
+        /* order: -1; */
+        align-self: flex-end;
+      }
+
+      /* order: -1 0 1 */
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="item">item-01</div>
+      <div class="item">item-02</div>
+      <div class="item">item-03</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .parent {
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: red;
+        position: relative;
+      }
+
+      .child {
+        /* width: 70px;
+        height: 70px; */
+        background-color: greenyellow;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+      }
+      /* left, right, top, bottom khi cùng được thiết lập, nếu xảy ra xung đột thì left được ưu tiên hơn rigth, top được ưu tiên hơn bottom */
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <span class="child">Lorem, ipsum.</span>
+    </div>
+  </body>
+</html>
