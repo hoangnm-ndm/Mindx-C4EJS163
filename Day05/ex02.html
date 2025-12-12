@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .product-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: auto;
+        gap: 12px 24px;
+        h3 {
+          color: orange;
+        }
+      }
+
+      @media all and (max-width: 1200px) {
+        .product-list {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      @media all and (max-width: 992px) {
+        .product-list {
+          grid-template-columns: repeat(3, 1fr);
+
+          h3 {
+            font-size: 20px;
+          }
+        }
+      }
+
+      @media all and (max-width: 768px) {
+        .product-list {
+          grid-template-columns: repeat(2, 1fr);
+
+          h3 {
+            font-size: 18px;
+          }
+        }
+      }
+
+      @media print {
+        h3,
+        p {
+          color: #000 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+
+      <div class="product-item">
+        <img src="./image.png" alt="" />
+        <h3>Áo thun nữ dài tay kiểu dáng croptop</h3>
+      </div>
+    </div>
+  </body>
+</html>

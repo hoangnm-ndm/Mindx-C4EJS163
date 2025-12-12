@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng Nhập - Nội Thất Cao Cấp</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f5f5f5;
+        height: 100vh;
+        display: flex;
+      }
+      .container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+      }
+      .left {
+        flex: 1;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+      }
+      .right {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+      }
+      .slideshow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        animation: slide 30s infinite;
+      }
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+      @keyframes slide {
+        0%,
+        14% {
+          opacity: 1;
+        } /* Ảnh 1 */
+        16%,
+        30% {
+          opacity: 0;
+        }
+        32%,
+        46% {
+          opacity: 1;
+        } /* Ảnh 2 */
+        48%,
+        62% {
+          opacity: 0;
+        }
+        64%,
+        78% {
+          opacity: 1;
+        } /* Ảnh 3 */
+        80%,
+        94% {
+          opacity: 0;
+        }
+        96%,
+        100% {
+          opacity: 1;
+        } /* Ảnh 4 (và lặp) */
+      }
+      .slide:nth-child(1) {
+        animation-delay: 0s;
+      }
+      .slide:nth-child(2) {
+        animation-delay: 7.5s;
+      }
+      .slide:nth-child(3) {
+        animation-delay: 15s;
+      }
+      .slide:nth-child(4) {
+        animation-delay: 22.5s;
+      }
+      /* Thêm ảnh bằng cách copy .slide và thay url */
+
+      .login-form {
+        width: 100%;
+        max-width: 400px;
+      }
+      .logo {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 28px;
+        font-weight: bold;
+        color: #8b6f47; /* Màu vàng nâu sang trọng */
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+      .input-group {
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .input-group input {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+      .input-group label {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        color: #aaa;
+        transition: 0.3s;
+        pointer-events: none;
+      }
+      .input-group input:focus ~ label,
+      .input-group input:valid ~ label {
+        top: -10px;
+        left: 10px;
+        font-size: 12px;
+        background: white;
+        padding: 0 5px;
+        color: #8b6f47;
+      }
+      .options {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        font-size: 14px;
+      }
+      button {
+        width: 100%;
+        padding: 15px;
+        background: #8b6f47;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #6b552f;
+      }
+      .register {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .register a {
+        color: #8b6f47;
+        text-decoration: none;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+        }
+        .left,
+        .right {
+          flex: none;
+          height: 50vh;
+        }
+        .right {
+          order: -1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="login-form">
+          <div class="logo">Nội Thất HomeLux</div>
+          <h2>Đăng Nhập</h2>
+          <form>
+            <div class="input-group">
+              <input type="email" required />
+              <label>Email</label>
+            </div>
+            <div class="input-group">
+              <input type="password" required />
+              <label>Mật khẩu</label>
+            </div>
+            <div class="options">
+              <label><input type="checkbox" /> Nhớ mật khẩu</label>
+              <a href="#">Quên mật khẩu?</a>
+            </div>
+            <button type="submit">Đăng Nhập</button>
+          </form>
+          <div class="register">
+            Chưa có tài khoản? <a href="#">Đăng ký ngay</a>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="slideshow">
+          <div
+            class="slide"
+            style="
+              background-image: url('https://www.marthastewart.com/thmb/JSJwSMsolMumuoCAHHIjICbzYgs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BradRamseyInteriors_credit_CarolineSharpnack-dee35c1fab554898af7c549697c2f592.jpg');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://www.bhg.com/thmb/PYtgOlpWRqt2lH4UEcwsXMhKIlg=/2000x0/filters:no_upscale():strip_icc()/20190521_meredith_015_preview-4cafea707ac344e18df0f94b6fff3356.jpg');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://www.marthastewart.com/thmb/ja8JonGhrKWXQk_4qzSOj_BDhWI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/LuluDesigns_credit_EspanaPhotography-7454a23fc91e40c98124523ddb756b87.jpg');
+            "
+          ></div>
+          <div
+            class="slide"
+            style="
+              background-image: url('https://assets.vogue.com/photos/67dd2aa9423f1e0521dbdcba/master/w_2560%2Cc_limit/Chango%2520-%2520Modern%2520Hamptons%2520Living%2520Room%2520Wide%2520-%2520courtesy%2520of%2520Sarah%2520Elliott.jpg');
+            "
+          ></div>
+          <!-- Thêm ảnh khác nếu muốn -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
