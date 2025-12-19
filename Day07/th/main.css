@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #f85e9f;
+  --background-color: #5d50c6;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+.btn {
+  padding: 16px 32px;
+  border: 1px solid var(--background-color);
+  font-weight: 600;
+  text-align: center;
+  border-radius: 99px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn.btn-primary {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+.btn.btn-primary:hover {
+  background-color: transparent;
+  color: var(--background-color);
+  box-shadow: 10px 10px 10px var(--background-color);
+}
+
+.btn.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn.btn-secondary:hover {
+  background-color: var(--background-color);
+  color: #fff;
+}
+a {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.hightlight {
+  color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--primary-color);
+  margin-bottom: 64px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 32px 0;
+  margin: 0 32px;
+
+  .logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 800;
+    a {
+      color: var(--primary-color);
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  nav > ul {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    a {
+      padding: 8px;
+      color: #8e8e93;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+
+  .user-control > a:first-child {
+    margin-right: 18px;
+  }
+}
+
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 32px;
+  margin-top: 43px;
+
+  .desc {
+    color: #888;
+    margin-bottom: 43px;
+  }
+
+  .hero-images {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > * {
+      flex: 0 1 272px;
+    }
+    img {
+      margin: 8px;
+    }
+  }
+}
