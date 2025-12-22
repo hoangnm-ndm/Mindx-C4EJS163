@@ -16,3 +16,10 @@ console.log(sum);
 /**
  * * Câu 4: Dùng 2 for loop lồng nhau.
  */
+
+fetch("https://dummyjson.com/products")
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data.products);
+    console.log("alo");
+  });
