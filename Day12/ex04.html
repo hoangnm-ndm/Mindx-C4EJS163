@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        input {
+          width: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <table id="cartTable" border="1">
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Thành tiền</th>
+        </tr>
+      </thead>
+
+      <tbody id="cartBody"></tbody>
+    </table>
+
+    <script>
+      const cart = [
+        { id: 1, name: "bo am pha tra", price: 200, quantity: 2 },
+        { id: 2, name: "Chuot khong day razer", price: 400, quantity: 1 },
+        { id: 3, name: "tai nghe", price: 150, quantity: 3 },
+      ];
+
+      // * Khi không có sản phẩm thì hiện không có sản phẩm nào.
+
+      // * Khi có hàng thì hiển thị bảng quản lý giỏ hàng.
+
+      const cartTable = document.getElementById("cartTable");
+      const cartBody = document.getElementById("cartBody");
+
+      if (cart.length === 0) {
+        cartTable.style.display = "none";
+        document.body.innerHTML = /*html*/ `
+          <h1>Gio hang trong</h1>
+          <a href="./">Tiep tuc mua sam!</a>
+        `;
+      }
+
+      let content = "";
+
+      cart.forEach((item, index) => {
+        content += /*html*/ `
+          <tr>
+            <td>${index + 1}</td>
+            <td>${item.name}</td>
+            <td>${item.price}</td>
+            <td>
+              <button>-</button>  
+              <input type="text" value="${item.quantity}" /> 
+              <button>+</button>  
+            </td>
+            <td>${item.price * item.quantity}</td>
+          </tr>
+        `;
+      });
+
+      cartBody.innerHTML = content;
+    </script>
+  </body>
+</html>

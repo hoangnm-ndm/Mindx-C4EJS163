@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dark {
+        background-color: #111;
+        color: #eee;
+      }
+      body {
+        transition: all ease-in-out 0.4s;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://mindx.edu.vn/">Trang chu MindX</a>
+    <button class="btn btn-primary">Click Me!</button>
+    <button onclick="changeTheme()">Dark/Light</button>
+
+    <button
+      onclick="console.log(`onclick`);"
+      ondblclick="console.log(`ondblclick`)"
+      id="btn-x"
+      class="btn btn-primary btn-xyz abc"
+    >
+      click me!
+    </button>
+
+    <script>
+      // const aElement = document.getElementsByTagName("a")[0];
+      // setTimeout(() => {
+      //   aElement.href = "https://google.com";
+      //   aElement.innerText = "Google";
+      //   // aElement.abc = "noi dung moi";
+      //   aElement.setAttribute("data-id", "01");
+      //   console.log(aElement.getAttribute("data-id"));
+      // }, 2000);
+
+      const btn = document.getElementsByClassName("btn")[0];
+      console.log(btn.className);
+      console.log(btn.classList); // * DOMTokenList
+      // * add, remove, toggle, contains, replace ..
+      btn.classList.add("btn-disnable");
+
+      function changeTheme() {
+        document.body.classList.toggle(`dark`);
+      }
+
+      // btn.style.backgroundColor = "blue";
+      // btn.style.padding = "12px 24px";
+      // btn.style.color = "#fff";
+
+      btn.style.cssText = `
+      background-color : blue;
+      padding : 12px 24px;
+      color : #fff;
+      `;
+    </script>
+
+    <script src="./ex06.js"></script>
+  </body>
+</html>
